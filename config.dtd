@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!ELEMENT sql (select* | delete* | insert* | code* | param*)+>
+
+<!--select-->
+        <!ELEMENT select (code|param*)+>
+        <!ATTLIST select id ID #REQUIRED>
+
+<!--delete-->
+        <!ELEMENT delete (code|param*)+>
+        <!ATTLIST delete id ID #REQUIRED>
+
+<!--insert-->
+        <!ELEMENT insert (code|param*)+>
+        <!ATTLIST insert id ID #REQUIRED>
+
+<!--code-->
+        <!ELEMENT code (#PCDATA)>
+
+<!--param-->
+        <!ELEMENT param (#PCDATA)>
+        <!ATTLIST param num CDATA #REQUIRED>
