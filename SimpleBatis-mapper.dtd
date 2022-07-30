@@ -1,0 +1,19 @@
+<!ELEMENT mapper (select | delete | update | insert)+>
+        <!ATTLIST mapper namespace CDATA #REQUIRED>
+        <!--select-->
+        <!ELEMENT select (#PCDATA)>
+        <!ATTLIST select id ID #REQUIRED>
+        <!ATTLIST select resultType CDATA #IMPLIED>
+        <!ATTLIST select keyName CDATA #IMPLIED>
+        <!--delete-->
+        <!ELEMENT delete (#PCDATA)>
+        <!ATTLIST delete id ID #REQUIRED>
+        <!ATTLIST delete resultType CDATA #IMPLIED>
+        <!--insert-->
+        <!ELEMENT insert (#PCDATA)>
+        <!ATTLIST insert id ID #REQUIRED>
+        <!ATTLIST insert resultType CDATA #IMPLIED>
+        <!--update-->
+        <!ELEMENT update (#PCDATA)>
+        <!ATTLIST update resultType CDATA #IMPLIED>
+        <!ATTLIST update id ID #REQUIRED>
