@@ -1,0 +1,9 @@
+<!ELEMENT driver (#PCDATA)>
+        <!ELEMENT url (#PCDATA)>
+        <!ELEMENT username (#PCDATA)>
+        <!ELEMENT password (#PCDATA)>
+        <!ELEMENT configuration (driver|url|username|password)+ >
+        <!ELEMENT mappers (mapper)+>
+        <!ELEMENT mapper EMPTY>
+        <!ATTLIST mapper resource CDATA #IMPLIED>
+        <!ELEMENT sql (configuration,mappers)>
